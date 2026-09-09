@@ -1,31 +1,15 @@
-## 欢迎访问 NCEPUwiki
+## 欢迎访问 NKUwiki
 
-NCEPUwiki 是由华北电力大学学生共同维护的**非官方**校园知识库，旨在提供：
 
-- 高质量、结构化的信息资源
-- 实用的升学/学习经验分享
-- 持续更新的学习资料
 
 ## 反馈与共建
 
-长期更新计划：
-
-- 各专业[学习资料](/categories/?category=学习资料)，提供请注明校区、院系、专业、课程名。
-- 各个课程的[评价](/pages/CourseEvaluation)，问卷<https://www.wjx.cn/vm/myKSytv.aspx#>
-- [内推码](/pages/EmployeeRefer/)
-
 更新计划：
-
-- 计算机知识包括 python，vs2010 卸载
-- 保研
-- 竞赛
-- 留学
 
 如果你发现内容需要补充、修正，欢迎通过以下方式参与共建：
 
-- 提交 [Issue](https://github.com/NCEPUwiki/NCEPUwiki/issues) 或者 [pull request](https://github.com/NCEPUwiki/NCEPUwiki/pulls)
-- 加入交流 QQ 群 417695180
-- 或发邮件至 `1361942776@qq.com`
+- 加入交流 QQ 群 1108024910
+- 或发邮件至 `1352862815@qq.com`
 
 ## 本地开发与构建
 
@@ -90,6 +74,3 @@ author: 作者名
 
 使用 `@vitepress-plugin/markmap`，在文章中以 `:::markmap` 和 `:::` 包裹 Markdown 导图内容，可在容器开头通过 YAML frontmatter 配置 `markmap` 选项。评优、学分和电气就业导图直接维护在对应文章中，无需导出 HTML 或嵌入 iframe。
 
-感谢所有[贡献者](https://github.com/NCEPUwiki/NCEPUwiki/graphs/contributors)参与维护。
-
-[![贡献者](https://contrib.rocks/image?repo=NCEPUwiki/NCEPUwiki)](https://github.com/NCEPUwiki/NCEPUwiki/graphs/contributors)
