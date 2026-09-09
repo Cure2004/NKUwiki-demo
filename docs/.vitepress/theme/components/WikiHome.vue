@@ -127,7 +127,7 @@ const latest = [...data.articles].sort((a, b) => b.updatedTime - a.updatedTime |
 				</div>
 				<ol class="recent-list">
 					<li v-for="article in latest" :key="article.url">
-						<a :href="'/NKUwiki-demo' + article.url">{{ article.title }}</a>
+						<a :href="`/NKUwiki-demo${article.url}`">{{ article.title }}</a>
 						<ArticleByline :date="article.updated" :author="article.author" />
 					</li>
 				</ol>

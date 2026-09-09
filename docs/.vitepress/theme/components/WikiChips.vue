@@ -12,7 +12,7 @@ defineEmits<{ select: [value: string] }>()
 		v-for="item in items"
 		:key="item.value ?? item.text"
 		class="chip"
-		:href="item.href ? '/NKUwiki-demo' + item.href : undefined"
+		:href="item.href ? `/NKUwiki-demo${item.href}` : undefined"
 		:type="item.href ? undefined : 'button'"
 		:aria-pressed="item.href ? undefined : selected === item.value"
 		@click="!item.href && $emit('select', item.value ?? item.text)"
