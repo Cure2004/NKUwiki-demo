@@ -88,7 +88,7 @@ const groups = computed(() => {
 		<ul class="article-list" :class="{ 'article-cards': view === 'cards' }">
 			<li v-for="article in list" :key="article.url">
 				<div class="index-item-content">
-					<a class="article-title" :href="article.url">{{ article.title }}</a>
+					<a class="article-title" :href="'/NKUwiki-demo' + article.url">{{ article.title }}</a>
 					<WikiChips :items="tagChips(article.tags)" class="tags" label="文章标签" />
 				</div>
 				<ArticleByline :date="article.updated" :author="article.author" />

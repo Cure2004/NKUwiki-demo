@@ -18,7 +18,7 @@ const date = computed(() => page.value.lastUpdated ? new Date(page.value.lastUpd
 	<nav v-if="fm.breadcrumbs?.length" class="article-breadcrumbs" aria-label="文章所在目录">
 		<ol>
 			<li v-for="category in fm.breadcrumbs" :key="category">
-				<a :href="`/categories/?category=${encodeURIComponent(category)}`">{{ category }}</a>
+				<a :href="`/NKUwiki-demo/categories/?category=${encodeURIComponent(category)}`">{{ category }}</a>
 			</li>
 		</ol>
 	</nav>

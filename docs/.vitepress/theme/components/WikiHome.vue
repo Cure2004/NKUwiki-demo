@@ -62,7 +62,7 @@ const latest = [...data.articles].sort((a, b) => b.updatedTime - a.updatedTime |
 			</p>
 			<!-- 主要行动按钮：跳转新生指南；第二个链接前往文章分类索引页 /categories/ -->
 			<div class="hero-actions">
-				<a class="primary" href="/pages/Preparation">阅读新生指南 <span aria-hidden="true">↗</span></a><a href="/categories/">浏览全部目录 →</a>
+				<a class="primary" href="/NKUwiki-demo/pages/Preparation">阅读新生指南 <span aria-hidden="true">↗</span></a><a href="/NKUwiki-demo/categories/">浏览全部目录 →</a>
 			</div>
 		</div>
 		<!-- Hero 右侧小卡片：校徽、校区范围、由 data loader 统计的条目总数、一句话定位 -->
@@ -81,17 +81,17 @@ const latest = [...data.articles].sort((a, b) => b.updatedTime - a.updatedTime |
 					<!-- aria-labelledby 让标题与本节语义关联，便于读屏器识别 -->
 					<h2 id="topics-title">
 						探索专题
-					</h2><a href="/categories/">全部目录 →</a>
+					</h2><a href="/NKUwiki-demo/categories/">全部目录 →</a>
 				</div>
 				<div class="topic-grid">
 					<!-- 动态专题卡片：v-for 遍历 topics 并解构出 [name, desc]；
 					href 优先使用 topicLinks 的 slug，映射不到的专题回退到贡献指南页 -->
-					<a v-for="[name, desc] in topics" :key="name" class="topic-card" :href="topicLinks[name] ? `/topics/${topicLinks[name]}/` : '/pages/BasicContribution/'">
+					<a v-for="[name, desc] in topics" :key="name" class="topic-card" :href="topicLinks[name] ? `/NKUwiki-demo/topics/${topicLinks[name]}/` : '/NKUwiki-demo/pages/BasicContribution/'">
 						<h3>{{ name }}</h3><p>{{ desc }}</p><span class="topic-arrow" aria-hidden="true">↗</span>
 					</a>
 					<!-- 友情链接作为一张特殊卡片排在网格末尾（community-card 样式），
 					指向 docs/10.贡献与其他/10.友情链接.md 生成的页面 -->
-					<a class="topic-card community-card" href="/pages/FriendshipLinks/"><h3>友情链接</h3><p>校园墙、咨询与兄弟院校</p><span class="topic-arrow" aria-hidden="true">↗</span></a>
+					<a class="topic-card community-card" href="/NKUwiki-demo/pages/FriendshipLinks/"><h3>友情链接</h3><p>校园墙、咨询与兄弟院校</p><span class="topic-arrow" aria-hidden="true">↗</span></a>
 				</div>
 			</section>
 
@@ -103,7 +103,7 @@ const latest = [...data.articles].sort((a, b) => b.updatedTime - a.updatedTime |
 				<p>欢迎补充。分享资料时，请注明校区等信息。</p>
 				<!-- 次级 CTA：了解贡献流程 / 到 GitHub 反馈问题 -->
 				<div class="hero-actions">
-					<a class="primary" href="/pages/BasicContribution/">了解如何贡献</a><a href="https://github.com/Cure2004/NKU_Wiki/issues">反馈问题 →</a>
+					<a class="primary" href="/NKUwiki-demo/pages/BasicContribution/">了解如何贡献</a><a href="https://github.com/Cure2004/NKU_Wiki/issues">反馈问题 →</a>
 				</div>
 				<!-- 快捷入口：分类页、课程评价、内推信息与贡献者列表 -->
 				<div class="community-links">
@@ -123,11 +123,11 @@ const latest = [...data.articles].sort((a, b) => b.updatedTime - a.updatedTime |
 				显示标题，并由 ArticleByline 展示 updated 日期与 author -->
 			<section>
 				<div class="section-heading">
-					<h2>最近更新</h2><a href="/archives/">更多 →</a>
+					<h2>最近更新</h2><a href="/NKUwiki-demo/archives/">更多 →</a>
 				</div>
 				<ol class="recent-list">
 					<li v-for="article in latest" :key="article.url">
-						<a :href="article.url">{{ article.title }}</a>
+						<a :href="'/NKUwiki-demo' + article.url">{{ article.title }}</a>
 						<ArticleByline :date="article.updated" :author="article.author" />
 					</li>
 				</ol>
@@ -136,7 +136,7 @@ const latest = [...data.articles].sort((a, b) => b.updatedTime - a.updatedTime |
 				这里取前 12 个，再经 tagChips 转成可点击的标签胶囊 -->
 			<section>
 				<div class="section-heading">
-					<h2>热门标签</h2><a href="/tags/">全部 →</a>
+					<h2>热门标签</h2><a href="/NKUwiki-demo/tags/">全部 →</a>
 				</div><WikiChips :items="tagChips(data.tags.slice(0, 12))" label="热门标签" />
 			</section>
 			<!-- 联系我们：两个 QQ 群、GitHub 仓库，以及手机访问的二维码（直接展示，无下拉） -->
