@@ -69,7 +69,7 @@ onBeforeUnmount(() => {
 <template>
 <div class="share-actions" data-share-exclude>
 	<button ref="trigger" class="wiki-download" aria-haspopup="dialog" @click="open">
-		生成分享图片
+		生成分享PDF（预览可能有误，以导出结果为准）
 	</button>
 	<dialog ref="dialog" class="share-dialog" aria-labelledby="share-title" @cancel.prevent="close" @click="($event.target === dialog) && close()">
 		<header class="share-toolbar">
@@ -90,7 +90,7 @@ onBeforeUnmount(() => {
 		</header>
 		<div class="share-preview">
 			<p v-if="busy" role="status">
-				正在生成图片…
+				正在生成预览…
 			</p>
 			<p v-if="error" role="alert">
 				{{ error }} <button @click="generate">
