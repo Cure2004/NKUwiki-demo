@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://cure2004.github.io/NKUwiki-demo/sitemap.xml
+Sitemap: https://cure2004.github.io/NKUwiki/sitemap.xml
