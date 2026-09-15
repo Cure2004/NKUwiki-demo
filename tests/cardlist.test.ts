@@ -15,6 +15,7 @@ test('card lists preserve rich cells, omit empty fields, and leave ordinary tabl
 	assert.match(html, /href="https:\/\/example.com"/)
 	assert.doesNotMatch(html, /campus-card-label">备注/)
 	assert.equal((html.match(/<table\b/g) || []).length, 1)
+	assert.equal((html.match(/class="cardlist-layout-toolbar"/g) || []).length, 1)
 })
 
 test('all group and food rows reach the cards with no hidden overflow columns', async () => {
