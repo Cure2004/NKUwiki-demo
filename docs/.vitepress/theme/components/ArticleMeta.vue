@@ -11,6 +11,8 @@ const { frontmatter: fm } = useData()
 const author = computed(() => typeof fm.value.author === 'string' ? fm.value.author : fm.value.author?.name)
 const authorUrl = computed(() => typeof fm.value.author === 'object' ? fm.value.author?.url || fm.value.author?.link : undefined)
 const date = computed(() => fm.value.date ? new Date(fm.value.date).toISOString().slice(0, 10) : '')
+</script>
+
 <template>
 <div v-if="fm.categories?.length || fm.articleHeader" class="article-meta vp-doc">
 	<nav v-if="fm.breadcrumbs?.length" class="article-breadcrumbs" aria-label="文章所在目录">
