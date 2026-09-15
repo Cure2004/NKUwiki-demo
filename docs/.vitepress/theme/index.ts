@@ -15,7 +15,6 @@ import WikiLayout from './components/WikiLayout.vue'
 import '@vitepress-plugin/markmap/style.css'
 import './styles/index.css'
 
-
 const CARD_LAYOUT_KEY = 'nku-wiki:cardlist-layout'
 const CARD_LAYOUT_VALUES = ['cards', 'compact', 'table'] as const
 type CardLayout = typeof CARD_LAYOUT_VALUES[number]
@@ -65,7 +64,7 @@ export default {
 		app.component('ArticleIndex', ArticleIndex)
 		app.component('DownloadPageImage', DownloadPageImage)
 		router.onAfterRouteChange = () => {
-			if (typeof window !== 'undefined'){
+			if (typeof window !== 'undefined') {
 				window.dispatchEvent(new Event('wiki:route-change'))
 				syncCardLayout()
 			}
